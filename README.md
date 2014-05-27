@@ -10,12 +10,16 @@
   
 * saveAs()
 > 用来将文件另存为一个文件，如文件的换名保存。声明如下：
+
     public void saveAs(java.lang.String destFilePathName,int optionSaveAs)
         throws com.jspsmart.upload.SmartUploadException,java.io.IOException;
-或者
+
+> 或者
+
     pubic void saveAs(java.lang.String destFilePathName)
         throws com.jspsmart.upload.SmartUploadException,java.io.IOException;
-  参数destFilePathName是另存为的文件名；参数optionSaveAs是另存为的选项，其值有三种，分别是SAVEAS_PHYSICAL（以操作系统的根目录为文件根目录的另存文件）、SAVEAS_VIRTUAL（以web应用程序的根目录为文件根目录的另存文件）、SAVEAS_AUTO（组件自己决定）。
+
+> 参数destFilePathName是另存为的文件名；参数optionSaveAs是另存为的选项，其值有三种，分别是SAVEAS_PHYSICAL（以操作系统的根目录为文件根目录的另存文件）、SAVEAS_VIRTUAL（以web应用程序的根目录为文件根目录的另存文件）、SAVEAS_AUTO（组件自己决定）。
 
 * isMissing()
 > 用于判断用户是否选择了文件，即提交的表单中对应的表单项是否有值，选择了文件时，返回false，否则返回true。
