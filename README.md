@@ -32,6 +32,7 @@
 #### 2.Files类
   表示所有上传文件的集合，通过它可以得到上传文件的数目，大小等信息。
 * getCount()
+
 >   取得上传文件的数目
     public int getCount();
 * getFile()
