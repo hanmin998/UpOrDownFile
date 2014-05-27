@@ -44,4 +44,29 @@ index为指定的位移，其值在0到getCount()-1之间
     public java.util.Collection getCollection();
 
 #### 3.Request类
-  等同于JSP内置对象request，对于文件上传的表单，
+  等同于JSP内置对象request，对于文件上传的表单，通过request对象无法获得表单项的值，必须通过jspSmartUpload组件提供的Request对象来获取。其主要有getParameter()，getParameterValues()，getParameterNames()方法。
+
+#### 4.SmartUpload类
+  完成上传下载工作。
+* initialize()
+> 执行上传下载的初始化工作，必须第一个执行。
+    public final void initialize(javax.servlet.jsp.PageContext pageContext);
+        pageContext为JSP页面的内置对象（页面上下文）。
+
+* upload()
+> 上传文件数据，上传文件操作，第一步执行initialize方法，第二部执行这个方法。
+    public void upload();
+
+* save()
+> 将上传文件保存到指定目录下，并返回保存文件数目。
+    public int save(String destPathName)或者public int save(String destPathName,int option)，参数含义同File类中的save()方法。
+
+* getFiles()
+> 取全部上传文件，以Files对象形式返回，可以利用Files类的方法来获取上传文件的数目信息。
+    public Files getFiles();
+
+* getRequest()
+> 获取Request对象，以便由此对象获得上传表单参数值。
+    public Request getRequest();
+
+
